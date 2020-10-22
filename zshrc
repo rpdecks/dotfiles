@@ -26,6 +26,12 @@ function g {
 
 
 
+# Load Git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/zsh $fpath)
+
+autoload -Uz compinit && compinit
+
 # aliases
 source $HOME/dotfiles/zsh/aliases
 
@@ -36,8 +42,18 @@ prompt
 
 alias webserver=python -m SimpleHTTPServer 8000
 
+# export PATH=/Users/robertphillips/Library/Python/3.8/bin:$PATH
+export PATH=/Users/robertphillips/.pyenv/versions/3.6.5/bin:$PATH
 export ASDF_DIR=$(brew --prefix asdf)
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 . $(brew --prefix asdf)/asdf.sh
 
 eval "$(jump shell --bind=j)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/robertphillips/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/robertphillips/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/robertphillips/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robertphillips/google-cloud-sdk/completion.zsh.inc'; fi

@@ -29,7 +29,7 @@
     # The -w flag tells your shell to wait until sublime exits
     export VISUAL="code"
     export SVN_EDITOR="code"
-    export GIT_EDITOR="code"
+    export GIT_EDITOR="vim"
     export EDITOR="code"
 
     # Version
