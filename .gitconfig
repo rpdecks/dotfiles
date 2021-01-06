@@ -1,0 +1,13 @@
+[user]
+	email = rpdecks@gmail.com
+	name = rpdecks
+[core]
+	excludesfile = /Users/robertphillips/.gitignore
+	editor = vim -w
+[alias]
+  sla = log --oneline --decorate --graph --all
+  uncommit = reset --soft HEAD^
+  browse = !hub browse
+  compare = !hub compare
+[gitreview]
+  username = rpdecks
