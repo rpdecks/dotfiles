@@ -35,12 +35,16 @@ autoload -Uz compinit && compinit
 # aliases
 source $HOME/dotfiles/zsh/aliases
 
-
 prompt
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias webserver=python -m SimpleHTTPServer 8000
+
+# Linus
+export PATH="usr/local/opt/node@10/bin:/usr/local/opt/mysql@5.7/bin:$PATH"
+export DCT_ENV=localhost
+export DCT_CONFIG=localdev,rphillips
 
 # export PATH=/Users/robertphillips/Library/Python/3.8/bin:$PATH
 export PATH=/Users/robertphillips/.pyenv/versions/3.6.5/bin:$PATH
@@ -57,3 +61,4 @@ if [ -f '/Users/robertphillips/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/robertphillips/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/robertphillips/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
